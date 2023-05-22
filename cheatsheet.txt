@@ -1,0 +1,48 @@
+Cheatsheet de los comandos de la terminal Gitbash
+
+-- OPERACIONES CON ARCHIVOS Y CARPETAS
+
+* Del tipo informativo
+pwd / Mostrar el nombre de la carpeta en el que uno se encuentra situado (print working directory).
+cd / Cambiar la carpeta de trabajo: Con este comando nos podemos mover entre diferentes directorios. Si queremos ir a un directorio en particular.
+ls / Listar el contenido de directorios (list): Este comando lista los ficheros y carpetas.
+
+* Crear o eliminar carpetas
+mkdir / Crear un carpeta (make directory).
+rmdir / Borrar un carpeta (remove directory)
+
+* Crear o eliminar archivos
+gedit / Crear y editar archivos de texto.
+rm / Borrar archivos.
+
+* Copiar archivos y directorios
+cp / Copiar un archivo o carpeta en el directorio especificado (copy)
+cp -r / Copiar carpetas
+Lmv / Mover un archivo o carpeta a un archivo o carpeta (move)
+
+-- GIT y GITHUB 
+
+* Conectar repositorio local
+$ git init /inicializar el repositorio local, se debe ejecutar posicionado en la carpeta que se quiera conectar
+$ git config user.name "mi usuario" /se configura el nombre de usuario con el que se registró la cuenta en github
+$ git config user.email "micorreo@email.com" /se configura el email con el que se registró la cuenta en github 
+$ git remote add origin <URL del repositorio remoto>  /se sincroniza el repositorio local con el repositorio remoto
+
+* Agregando y subiendo archivos al repositorio local y remoto
+$ git add .  /agrega todos los archivos de la carpeta en la que nos encontremos para seguimiento *nota: no se suben carpetas sin archivos
+$ git commit - m "mensaje del commit"  /comitea los cambios hechos en el repositorio local
+$ git push origin main  /envía los cambios al repositorio remoto
+$ git status  /seguimiento del estado de los archivos
+
+* Bajando archivos de github
+$ git clone <URL del repositorio remoto> /crea una copia local y sincroniza los archivos que esten en un repositorio en github
+$ git remote -v  /consulta el repositorio con el que esta sincronizado el repositorio local 
+$ git pull origin main  /actualiza los archivos en el repositorio local tomando del repositorio remoto 
+$ git log  /consulta los commits ejecutados en el repositorio remoto
+
+* Ramas
+$ git branch  /enumera todas las ramas de un repositorio es similar a git branch --list
+$ git branch <branch>   /crea una nueva rama llamada <branch>
+$ git branch -d <branch>  /elimina la rama llamada <branch> Git evita que se limine una rama si tiene cambios que no se han fusionado aun con la rama main.
+$ git branch -D <branch>  /forza la eliminación de la rama especificada, incoluso si tiene cambios sin fusionar
+$ git checkout <nombre_rama>  /para moverse a una rama llmada <nombre_rama>. Git solo permitirá movernos a otra rama si no tenemos cambios. Si tenemos cambios debemos: 1-Eliminarlos, 2-Confirmarlos (haciendo un git commit)
