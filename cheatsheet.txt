@@ -6,6 +6,11 @@ Cheatsheet de los comandos de la terminal Gitbash
 pwd / Mostrar el nombre de la carpeta en el que uno se encuentra situado (print working directory).
 cd / Cambiar la carpeta de trabajo: Con este comando nos podemos mover entre diferentes directorios. Si queremos ir a un directorio en particular.
 ls / Listar el contenido de directorios (list): Este comando lista los ficheros y carpetas.
+$ ls / Lista archivos en el directorio o carpeta
+$ ls -a   / Lista todos los archivos, incluyendo los archivos ocultos
+$ ls -l   / Muestra toda la información de una carpeta: usuario, grupo, permisos, tamaño, fecha y hora de creación.
+$ ls -R   / Muestra las carpetas y los archivos contenidos en ellos de manera recursiva
+$ pwd     / Muestra la carpeta en la que se está trabajando actualmente
 
 * Crear o eliminar carpetas
 mkdir / Crear un carpeta (make directory).
@@ -15,10 +20,20 @@ rmdir / Borrar un carpeta (remove directory)
 gedit / Crear y editar archivos de texto.
 rm / Borrar archivos.
 
+$ rm -r [Nombre de la carpeta]  /elimina una carpeta y su contenido recursivamente
+
 * Copiar archivos y directorios
 cp / Copiar un archivo o carpeta en el directorio especificado (copy)
 cp -r / Copiar carpetas
 Lmv / Mover un archivo o carpeta a un archivo o carpeta (move)
+
+Copiar/Mover/Renombrar
+$ mv [ruta/archivo1] [ruta/archivo2]   / Renombra archivos (archivo2 no debe existir o será sobreescrito)
+$ mv [ruta/carpeta1] [ruta/carpeta2]   / Renombra la carpeta1 como carpeta2 (carpeta 2 no debe existir)
+$ mv [ruta/carpeta1] [ruta/carpeta2]   / Mueve contenido de carpeta1 a carpeta2 (carpeta 2 debe existir)
+$ cp [ruta/archivo1] [ruta/archivo2]   / Copia un archivo o carpeta
+opción: -r   / Indica que copie recursivamente el contenido de las subcarpetas
+
 
 -- GIT y GITHUB 
 
