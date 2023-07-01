@@ -1,0 +1,6 @@
+Direccion IP Privada: 10.0.2.15
+Direccion IP Pública: 189.190.145.21
+Dirección MAC: 10.0.2.15
+
+¿Es diferente la IP pública y privada de nuestra máquina host?
+R = Sí es diferente.
